@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JavaScript Array Object</title>
+  </head>
+  <body>
+      <h1>JavaScript Array Object</h1>
+     
+
+      <div id="placeholder"></div>
+     
+
+      <script>
+          //string
+          let output="IT obuka"
+          var cars = ["Mercedes", "Volvo", "ŠKODA", "Audi", "BMW", "saab"];
+          output=cars[1];
+          //output=cars.join(" * ");
+         // output=cars.join(" <br/> ");
+          cars.push("Ferrari");
+          output=cars.join(" <br/> ");
+
+          output=cars[3];
+          output="";
+          for (i=0; i<cars.length; i++) {
+              console.log(cars);
+              output+= cars[i] + "<br/> ";
+          }
+
+          cars.pop();
+          output=cars.join(" * ");
+
+          cars.sort();
+          output=cars.join(" * ");
+
+
+          //numbers
+
+          let numbers=[45, 4, 69, 16, 125];
+          output=Math.max(45, 4, 69, 16, 25);
+          //na nizu se ne moze poyvati math funkcija
+
+
+          output=Math.max(numbers); //izbaci Nan
+
+          output=Math.max(...numbers); // ISPRAVNO
+
+          let maxKey=numbers.indexOf(16);
+          output=maxKey;
+        
+
+          maxKey=numbers.indexOf(Math.max(...numbers));
+          output=maxKey;
+
+          numbers=[ 4, 9, 16, 25];
+          numbers=numbers.map(Math.sqrt);
+          output=numbers.join(" * ");
+
+
+          //react
+          numbers=numbers.map( (element) => {
+            return Math.pow(element,3)
+            }
+          );
+          output=numbers.join(" * ");
+
+
+
+
+
+
+
+
+          document.getElementById("placeholder").innerHTML = output;
+       
+
+        
+      </script>  
+  
+  </body>
+</html>

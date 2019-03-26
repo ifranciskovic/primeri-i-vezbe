@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+<title>Java Script Array Object</title>
+</head>
+
+<body>
+</div>
+<div id='0'></div>
+<div id='1'></div>
+<div id='2'></div>
+<div id='3'></div>
+<div id="4"></div>
+<div id="5"></div>
+<script>
+let output=null
+let zbir=null
+let phones=['Lenovo','Del','Hewlett Packard','Apple','Asus']
+document.getElementById('0').innerHTML=phones
+phones.push('Sony')
+document.getElementById('1').innerHTML=phones
+
+output=phones.join(" ; ");
+document.getElementById('2').innerHTML=output
+
+for(let i=0;i<phones.length;i++){
+    zbir=zbir+phones[i].length
+}
+document.getElementById('3').innerHTML=`zbir brojeca karaktera je ${zbir}`
+
+var ul = document.createElement('ol');
+    document.getElementById('4').appendChild(ul);
+    phones.forEach(function(phones){
+        var li = document.createElement('li');
+        ul.appendChild(li);
+        li.innerHTML += phones;
+});
+// arr.sort(function(a, b){
+//   // ASC  -> a.length - b.length
+//   // DESC -> b.length - a.length
+//   return b.length - a.length;
+// });
+// function bubbleSort(a) {
+//     var swapped;
+//     do {
+//         swapped = false;
+//         for (var i = 0; i < a.length - 1; i++) {
+//             if (a[i].length > a[i + 1].length) {
+//                 var temp = a[i];
+//                 a[i] = a[i + 1];
+//                 a[i + 1] = temp;
+//                 swapped = true;
+//             }
+//         }
+//     } while (swapped);
+// }
+// bubbleSort(phones)
+phones.sort(function(a, b){return a.length - b.length});
+
+var ul = document.createElement('ol');
+    document.getElementById('5').appendChild(ul);
+    phones.forEach(function(phones){
+        var li = document.createElement('li');
+        ul.appendChild(li);
+        li.innerHTML += phones;
+});
+</script> 
+
+</body>
+
+</html> 
