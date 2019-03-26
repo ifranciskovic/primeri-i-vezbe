@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JavaScript program to create a new string from a given string taking the last 3 characters and added at both the front and back. The string length must be 3 or more.</title>
+</head>
+<body>
+    <script>
+    function front_back3(str)
+        {
+        if (str.length>=3)
+        {
+        str_len = 3;
+
+        back = str.substring(str.length-3);
+        return back + str + back;
+        }
+        else
+            return false;
+        }
+        console.log(front_back3("abc"));
+        console.log(front_back3("ab"));
+        console.log(front_back3("abcd"));
+
+
+        //JavaScript program to check if a string starts with 'Java' and false otherwise
+        function start_spec_str(str)
+            {
+            if (str.length < 4)
+            {
+                return false;
+            }
+            front = str.substring(0, 4);
+            if (front == 'Java') 
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+            }
+
+            console.log(start_spec_str("JavaScript"));
+            console.log(start_spec_str("Java"));
+            console.log(start_spec_str("Python"));
+
+            //JavaScript program to check if a string “Script” presents at 5th (index 4) position in a 
+            //given string, if “Script” presents in the string 
+            //return the string without “Script” otherwise return the original one.
+            function check_script(str)
+            {
+            if (str.length < 6) {
+                return str;
+            }
+            let result_str = str;
+                
+            if (str.substring(10, 4) == 'Script') 
+                {
+                
+            result_str = str.substring(0, 4) + str.substring(10,str.length);
+                
+            }
+            return result_str;
+            }
+
+            console.log(check_script("JavaScript"));
+            console.log(check_script("CoffeeScript"));
+
+            function front_back(str)
+            {
+            first = str.substring(0,1);
+            return first + str + first;
+            }
+            console.log(front_back('a'));
+            console.log(front_back('ab'));
+            console.log(front_back('abc'));
+
+
+            function string_check(str1) {
+            if (str1 === null || str1 === undefined || str1.substring(0, 2) === 'Py') 
+            {
+                return str1;
+            }
+            return "Py"+str1;
+            }
+
+            console.log(string_check("Python"));
+            console.log(string_check("thon"));
+
+            function remove_character(str, char_pos) 
+            {
+            part1 = str.substring(0, char_pos);
+            part2 = str.substring(char_pos + 1, str.length);
+            return (part1 + part2);
+            }
+
+            console.log(remove_character("Python",0));
+            console.log(remove_character("Python",3));
+            console.log(remove_character("Python",5));   
+
+            function upper_lower(str) {
+            if (str.length < 3) {
+                return str.toUpperCase();
+            }
+            front_part = (str.substring(0, 3)).toLowerCase();
+            back_part = str.substring(3, str.length);  
+            return front_part + back_part;
+            }
+            console.log(upper_lower("Python"));
+            console.log(upper_lower("Py"));
+            console.log(upper_lower("JAVAScript")); 
+
+            function string_reverse(str) 
+            {
+                return str.split("").reverse().join("");
+            }
+
+            console.log(string_reverse("w3resource"));
+            console.log(string_reverse("www"));
+            console.log(string_reverse("JavaScript"));
+
+            function capital_letter(str) 
+            {
+                str = str.split(" ");
+
+                for (var i = 0, x = str.length; i < x; i++) {
+                    str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+                }
+
+                return str.join(" ");
+            }
+
+            console.log(capital_letter("Write a JavaScript program to capitalize the first letter of each word of a given string."));
+            
+            
+            function vowel_Count(str)
+            { 
+
+            return str.replace(/[^aeiou]/g, "").length; 
+            }
+
+            console.log(vowel_Count("Python"));
+            console.log(vowel_Count("w3resource.com"));
+                
+    
+    </script>
+
+</body>
+</html>
+

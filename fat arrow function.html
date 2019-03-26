@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Fat arrow function</title>
+  </head>
+  <body>
+    <div>
+        <script>
+            'use strict';
+           /* var getA = function(a) {
+                return a;
+            };*/
+           let getA= a => a;
+
+           console.log(getA(1));
+            
+
+           let square = (a) => {return a*a};
+           console.log(square(2));
+
+           let mult = (a, b) => {return a*b};
+           console.log(mult(2, 3));
+
+
+          /* var x = function() {
+               var that=this;
+               this.val=1;
+               setTimeout(function() {
+                   that.val++;
+                   console.log(that.val)
+               }, 1)
+           };*/
+           var x = function() {
+               
+               this.val=1;
+               setTimeout(() => {
+                   this.val++;
+                   console.log(this.val)
+               }, 1)
+           };
+           var xx=new x();
+
+           var y = function() {
+            console.log(arguments[0]);
+           };
+           var y = (...n) => {
+            console.log(n[0]);
+           };
+           y(1, 2, 3);
+
+
+        </script>
+       
+    </div>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>The difference between a given number and 13, if the number is greater than 13 return double the absolute difference.</title>
+</head>
+<body>
+    <script>
+        function difference(n)
+        {
+            if (n <= 13)
+                return 13 - n;
+            else
+                return (n - 13) * 2;
+        }
+        console.log(difference(-32))
+        console.log(difference(11))
+        
+
+    function test50(x, y) 
+        {
+        return ((x == 50 || y == 50) || (x + y == 50));
+        }
+        console.log(test50(50, 50))
+        console.log(test50(20, 50))
+        console.log(test50(20, 20))
+        console.log(test50(20, 30))
+
+        function positive_negative(x, y)
+        {
+        if ((x < 0 && y > 0) || x > 0 && y < 0) 
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
+        }
+        console.log(positive_negative(2, 2));
+        console.log(positive_negative(-2, 2));
+        console.log(positive_negative(2, -2));
+        console.log(positive_negative(-2, -2));
+
+
+
+
+
+
+        function max_of_three(x, y, z) 
+        {
+        max_val = 0;
+        if (x > y)
+        {
+            max_val = x;
+        } else
+        {
+            max_val = y;
+        }
+        if (z > max_val) 
+        {
+            max_val = z;
+        }
+        return max_val;
+        }
+
+        console.log(max_of_three(1,0,1));
+        console.log(max_of_three(0,-10,-20));
+        console.log(max_of_three(1000,510,440));
+
+
+        function near_100(x, y) {
+        if (x != y)
+        {
+        x1 = Math.abs(x - 100);
+        y1 = Math.abs(y - 100);
+
+        if (x1 < y1)
+        {
+            return x;
+        }
+        if (y1 < x1)
+        {
+            return y;
+        }
+        return 0;
+        }
+        else
+            return false;
+        }
+
+        console.log(near_100(90, 89));
+        console.log(near_100(-90, -89));
+        console.log(near_100(90, 90));
+
+        function check8(x, y) {
+        if (x == 8 || y == 8) {
+            return true;
+        }
+
+        if (x + y == 8 || Math.abs(x - y) == 8)
+        {
+            return true;
+        }
+
+        return false;
+        }
+
+        console.log(check8(7, 8));
+        console.log(check8(16, 8));
+        console.log(check8(24, 32));
+        console.log(check8(17, 18));
+
+        function number_order(x, y, z ) {
+        if ( y > x && z > y) 
+        {
+            return "strict mode";    
+        }
+        else if(z > y) 
+        return "Soft mode";
+        else
+            return "Undefinded";
+        }
+
+        console.log(number_order(10,15,31));
+        console.log(number_order(24,22,31));
+        console.log(number_order(50,21,15));
+
+        function same_last_digit(p, q, r) {
+            return (p % 10 === q % 10) ||
+                (p % 10 === r % 10) ||
+                (q % 10 === r % 10);
+                
+        }
+
+        console.log(same_last_digit(22,32,42));
+        console.log(same_last_digit(102,302,2));
+        console.log(same_last_digit(20,22,45));
+
+        
+    </script>
+
+</body>
+</html>

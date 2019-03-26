@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+        <h1>Povrsina trougla</h1>
+        <div>
+        <p id="povrsina"></p>
+</div>
+        <script>
+            var a=5;
+            var b=6;
+            var c=7;
+            var s=(a+b+c)/2;
+            var povrsina=Math.sqrt(s*((s-a)*(s-b)*(s-c)));
+            document.getElementById("povrsina").innerHTML=povrsina.toFixed(4);
+
+        
+        
+        </script>
+  
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Spread operator</title>
+  </head>
+  <body>
+    <div>
+        <script>
+          var x = function(...n){
+              console.log(n);
+
+          };
+          x(1,2,3,4);
+          var n=[1,2,3];
+          var y = function(a, b, c, ...n){
+              console.log(n);
+
+          };
+          y(1,2,3,4);
+          var dowhatever=['fun', 'more fun'];
+          var life=['born', 'learn to walk', ...dowhatever, 'go to heaven'];
+
+           console.log(life);
+        </script>
+       
+    </div>
+  </body>
+</html>

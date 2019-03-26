@@ -1,0 +1,26 @@
+<html>
+<body>
+<script type="text/javascript">
+    var d = new Date()
+    dan=d.getDay()
+    switch (dan)
+    {
+        //case 4:
+    //document.write("<b>cetvrtak!</b>")
+    case 5:
+    document.write("<b>Konačno petak!</b>")
+    break
+    case 6:
+    document.write("<b>Subota URAAA!</b>")
+    break
+    case 0:
+    document.write("<b>Nedelja odmor!</b>")
+    break
+    default:
+    document.write("<b>Kad će vikend?!</b>")
+    }
+</script>
+<p>U ovom primeru se generiše različita poruka u zavisnosti od dana u nedelji. Primetite da
+je nedelja=0, ponedeljak=1, utorak=2, itd.</p>
+</body>
+</html>

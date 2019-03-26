@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>title</title>
+  </head>
+  <body>
+      <script>
+        
+var today = new Date();
+var day=today.getDay();
+console.log(day); 
+var dayList=['Nedelja','Ponedeljak', 'Utorak', 'Sreda', 'Cetvrtak', 'Petak', 'Subota'];
+console.log('Today is: '+ dayList[day]+ '.'); 
+var hour=today.getHours();
+var minute=today.getMinutes();
+var second= today.getSeconds();
+var text = (hour>=12)? " PM":" AM";
+hour = (hour>=12)? hour -12: hour;
+if (hour===0 && text===" PM")
+{
+if (minute===0 && second===0) 
+{
+    hour=12;
+    text='podne';
+} else {
+    hour=12;
+    text=' PM';
+}
+} 
+if (hour===0 && text===" AM")
+{
+if (minute===0 && second===0) 
+{
+    hour=12;
+    text='ponoc';
+} else {
+    hour=12;
+    text=' AM';
+}
+} 
+console.log("Current Time : "+hour + text + " : " + minute + " : " + second);
+
+     </script>
+  
+  </body>
+</html>
